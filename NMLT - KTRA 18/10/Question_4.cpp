@@ -16,7 +16,6 @@ int main() {
 
     vector<int> digits;
     int temp = number;
-    bool isPalindrome = false;
 
     while (temp > 0) {
         remainder = temp % 10;
