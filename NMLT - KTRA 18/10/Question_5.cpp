@@ -9,24 +9,19 @@ true*/
 
 
 #include <iostream>
-#include <vector>
 using namespace std;
 
 int main() {
     int number;
     cin >> number;
+    int sum = 0;
     
-    vector<int> uoc;
     for (int i = 1; i < number; i++) {
         if (number % i == 0) {
-            uoc.push_back(i);
+            sum += i;
         }
     }
 
-    int sum = 0;
-    for (int i = 0; i < uoc.size(); i++) {
-        sum += uoc[i];
-    }
 
     if (sum == number) {
         cout << "true" << endl;
