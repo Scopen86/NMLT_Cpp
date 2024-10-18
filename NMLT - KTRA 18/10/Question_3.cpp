@@ -7,7 +7,8 @@ int main() {
     int x;
     cin >> x;
     double sum = 1.0, sum_old = 0.0;
-    int i = 1, factorial = 1;
+    int i = 1;
+    long factorial = 1;
 
     while (sum - sum_old > 0.001) {
         sum_old = sum;

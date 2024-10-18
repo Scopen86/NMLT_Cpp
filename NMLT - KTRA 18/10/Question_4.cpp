@@ -7,30 +7,24 @@ Input Result
 55555 55555 is a palindrome!*/
 
 #include <iostream>
-#include <vector>
 using namespace std;
 
 int main() {
-    int number, remainder, reverse = 0;
-    cin >> number; // 1234321
-
-    vector<int> digits;
-    int temp = number;
+    int n, remainder, reverse = 0;
+    cin >> n; 
+    int temp = n;
 
     while (temp > 0) {
         remainder = temp % 10;
-        digits.push_back(remainder);
+        reverse = reverse * 10 + remainder;
         temp = temp / 10;
     }
 
-    for (int i = 0; i < digits.size(); i++) {
-        reverse = reverse * 10 + digits[i];
-    }
 
-    if (number == reverse) {
-        cout << number << " is a palindrome!" << endl;
+    if (n == reverse) {
+        cout << n << " is a palindrome!" << endl;
     } else {
-        cout << number << " is not a palindrome!" << endl;
+        cout << n << " is not a palindrome!" << endl;
     }
 
     return 0;
